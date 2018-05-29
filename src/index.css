@@ -1,5 +1,26 @@
 body {
-  margin: 0;
+  margin: 2px;
   padding: 0;
   font-family: sans-serif;
+}
+
+.main {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainBody {
+  display: flex;
+  flex-direction: row;
+}
+
+.toolbar {
+  justify-content: flex-start !important;
+}
+
+.toolbar img {
+  height: 20px;
+  margin-top: 15px;
+  margin-right: 15px;
 }

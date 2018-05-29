@@ -1,34 +1,38 @@
 import React from 'react';
+import Searchbar from "./Searchbar";
+import ViewBar from "./ViewBar";
 
 export default class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            description: []
+            data: []
         }
-
     }
 
-    componentDidMount() {
-        fetch("https://images-api.nasa.gov/search?description={description}")
-            .then(response => response.json())
-            .then(responsejson => {
-                this.setState({
-                    description: responsejson
-                })
-            })
+
+    actSearch(data) {
+        this.setState({
+            data: data
+        })
     }
 
     render() {
 
-        if (this.state.description.length < 1) return false;
-
-        console.log(this.state.description);
-
 
         return (
-            <div>
-                Ciao
+            <div className={"main"}>
+
+                <Searchbar
+                    actSearch={this.actSearch}
+                />
+
+                <div className={"mainBody"}>
+                    <ViewBar
+                        data={this.state.data}
+                    />
+                </div>
+
             </div>
         );
     }
