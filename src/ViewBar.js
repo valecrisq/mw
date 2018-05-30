@@ -1,21 +1,36 @@
 import React from 'react';
 
+
 export default class ViewBar extends React.Component {
 
     render() {
 
-        console.log(this.props.data);
-
         let renderData = [];
-        for (let i in this.props.data) {
-            let singleData = this.props.data[i]
-            renderData.push(
-                <img src={singleData.links[0].href} alt={singleData.data[0].title}/>
-            )
+        if (this.props.data.collection) {
+            for (let i in this.props.data.collection.items) {
+                //debugger;
+                let singleData = this.props.data.collection.items[i];
+
+
+                if (!singleData.links[0].href.includes('jpg')) continue;
+                renderData.push(
+                    <div
+                        className={'image'}
+                        style={{borderRadius: 50, backgroundImage: 'url(' + singleData.links[0].href + ')'}}
+                        onClick={(e) => this.props.actClickImage(i)}
+                        key={i}
+                    >
+
+                    </div>
+                )
+
+
+            }
         }
 
+
         return (
-            <div>
+            <div className={'viewBar'}>
                 {this.props.data && renderData}
             </div>
         );
