@@ -1,6 +1,6 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Main from './Main';
+import Main from './Main/Main';
 
 
 export default class App extends React.Component {

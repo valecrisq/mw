@@ -1,4 +1,6 @@
 import React from 'react';
+import './DetailsBar.css';
+import Card from 'material-ui/Toolbar';
 
 export default class DetailBar extends React.Component {
 
@@ -22,7 +24,6 @@ export default class DetailBar extends React.Component {
                             <h2 style={{wordWrap: 'wrap'}}>Description: {this.props.imageData.data[0].description}</h2>
                             <h2>Nasa ID: {this.props.imageData.data[0].nasa_id}</h2>
                         </div>
-
                     </div>
                 </div>
                 }

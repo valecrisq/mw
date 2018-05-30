@@ -1,13 +1,13 @@
 import React from 'react';
 import Toolbar from 'material-ui/Toolbar';
 import TextField from 'material-ui/TextField';
-import search from './icons/search.svg';
+import search from '../icon/search.svg';
+import './SearchBar.css';
 
-export default class ToolbarExamplesSimple extends React.Component {
+export default class Searchbar extends React.Component {
 
     searchResult(e) {
-        console.dir(e.key);
-        if (e.key === 'Enter') {
+        if (e.which === 13) {
             fetch("https://images-api.nasa.gov/search?q=" + this.refs.inputUser.input.value)
                 .then(response => response.json())
                 .then(responsejson => {
@@ -19,7 +19,7 @@ export default class ToolbarExamplesSimple extends React.Component {
 
     render() {
         return (
-            <Toolbar className={'toolbar'}>
+            <Toolbar className={'searchbar'}>
                 <img src={search} alt=""/>
                 <TextField
                     hintText="What are you looking for?"

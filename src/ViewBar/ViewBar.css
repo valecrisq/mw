@@ -1,0 +1,17 @@
+.viewBar {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+.image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid grey;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}

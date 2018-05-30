@@ -1,0 +1,25 @@
+.detailBar {
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin: 10px;
+    padding: 20px;
+    background: whitesmoke;
+}
+
+.detailBar img {
+    width: 40%;
+    height: auto;
+    margin: 5px;
+    max-width: 40%;
+    background-color: whitesmoke;
+    border: 3px solid grey;
+}
+
+.detailImage {
+    display: flex;
+    flex-direction: row;
+}
+
+.details {
+    max-width: 60%;
+}

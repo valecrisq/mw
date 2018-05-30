@@ -1,9 +1,8 @@
 import React from 'react';
-import Searchbar from "./Searchbar";
-import ViewBar from "./ViewBar";
-import DetailBar from "./DetailBar";
-import {List, ListItem} from 'material-ui/List';
-
+import Searchbar from "../SearchBar/Searchbar";
+import ViewBar from "../ViewBar/ViewBar";
+import DetailBar from "../Details/DetailBar";
+import './Main.css';
 
 export default class Main extends React.Component {
     constructor(props) {
@@ -20,10 +19,10 @@ export default class Main extends React.Component {
         });
     }
 
-    actClickImage(imageId) {
+    actClickImage(item) {
         if (this.state.data.collection) {
             this.setState({
-                selectedImage: this.state.data.collection.items[imageId]
+                selectedImage: item
             })
         }
     }
@@ -38,12 +37,12 @@ export default class Main extends React.Component {
 
                 <div className={"mainBody"}>
 
-                    <List style={{maxHeight: 10}}>
+                    <div className={'scrollViewBar'}>
                         <ViewBar
                             data={this.state.data}
                             actClickImage={(imageId) => this.actClickImage(imageId)}
                         />
-                    </List>
+                    </div>
 
                     <DetailBar
                         imageData={this.state.selectedImage}

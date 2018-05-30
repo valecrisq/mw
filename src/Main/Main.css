@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainBody {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+.scrollViewBar {
+    overflow: auto;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: 100%;
+}

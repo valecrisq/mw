@@ -2,61 +2,11 @@ body {
   margin: 2px;
   padding: 0;
   font-family: sans-serif;
+  background: whitesmoke;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-}
 
-.mainBody {
-  display: flex;
-  flex-direction: row;
-}
 
-.toolbar {
-  justify-content: flex-start !important;
-}
 
-.toolbar img {
-  height: 20px;
-  margin-top: 15px;
-  margin-right: 15px;
-}
 
-.viewBar {
-  display: flex;
-  flex-direction: column;
-}
 
-.image {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 200px;
-  height: 200px;
-  margin: 5px;
-}
-
-.detailBar {
-  flex-grow: 1;
-  flex-shrink: 0;
-  margin-left: 10px;
-}
-
-.detailBar img {
-  width: 40%;
-  height: auto;
-  margin: 5px;
-  max-width: 40%;
-  background-color: whitesmoke;
-}
-
-.detailImage {
-  display: flex;
-  flex-direction: row;
-}
-
-.details {
-  max-width: 60%;
-}
