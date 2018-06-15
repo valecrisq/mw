@@ -2,6 +2,7 @@ import React from 'react';
 import Toolbar from 'material-ui/Toolbar';
 import TextField from 'material-ui/TextField';
 import search from '../icon/search.svg';
+import nasalogo from '../icon/nasalogo.png';
 import './SearchBar.css';
 
 export default class Searchbar extends React.Component {
@@ -20,9 +21,15 @@ export default class Searchbar extends React.Component {
     render() {
         return (
             <Toolbar className={'searchbar'}>
-                <img src={search} alt=""/>
+                <img className={'nasaLogo'} src={nasalogo} alt=""/>
+                <img className={'searchImage'} src={search} alt=""/>
+
                 <TextField
+                    className={'textField-searchBar'}
                     hintText="What are you looking for?"
+                    hintStyle={{color: 'white'}}
+                    inputStyle={{color: 'white'}}
+                    underlineShow={false}
                     onKeyPress={(e) => this.searchResult(e)} ref={'inputUser'}
                 />
             </Toolbar>
